@@ -1,0 +1,29 @@
+:root{
+    --root-height: 100vh;
+    --root-width: 30vw;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+
+}
+
+.image{
+    height: var(--root-height);
+    width: var(--root-width);
+}
+
+.formDiv{
+    background-color: rgba(39,60,81,255);
+    width: 70vw;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
