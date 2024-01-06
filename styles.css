@@ -1,6 +1,12 @@
+/* *{
+    border: 2px solid red;
+} */
+
 :root{
     --root-height: 100vh;
     --root-width: 30vw;
+    --font-color : rgba(92,217,231,255);
+    --background-color: #06070B;
 }
 
 body{
@@ -10,7 +16,6 @@ body{
 
 .container{
     display: flex;
-
 }
 
 .image{
@@ -19,11 +24,84 @@ body{
 }
 
 .formDiv{
-    background-color: rgba(39,60,81,255);
+    background-color: #06070B;
+    color: rgba(92,217,231,255);
     width: 70vw;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
+    padding-left: 20px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: large;
+    font-weight: bold;
+
 }
 
+.inside{
+    padding: 50px;
+    padding-left: 20px;
+}
 
+.inside h1{
+    padding-bottom: 70px;
+}
 
+.inside#last_name{
+    gap: 50px;
+}
+
+.names{
+    display: flex;
+    padding: 20px;
+    gap: 150px;
+}
+
+.contacts{
+    display: flex;
+    padding: 20px;
+    gap: 150px;
+}
+
+.passwords{
+    display: flex;
+    padding: 20px;
+    gap: 150px;
+}
+
+.buttons{
+    padding-left: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.buttons > button{
+    height: 50px;
+    width: 250px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: large;
+    font-weight: bold;
+    background-color: var(--font-color);
+    color: var(--background-color);
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.buttons > button:hover{
+    background-color: var(--background-color);
+    color: white;
+}
+
+.login{
+    padding-left: 12px ;
+}
+
+input[type=text] {
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #E91E63;
+	background: rgba(#E91E63, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: #E91E63;
+}
