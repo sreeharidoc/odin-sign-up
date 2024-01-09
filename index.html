@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
     <title>Sign Up</title>
 </head>
 <body>
@@ -28,11 +29,13 @@
                     <div class="contacts">
                         <div>
                             <label for="email">EMAIL</label><br>
-                            <input type="email" id="email" placeholder="eg: something@something.com" required>
+                            <input type="email" id="email" pattern="^[a-zA-Z0-9]+@gmail\.com$" placeholder="eg: something@some.com" title="Enter your email" required>
+                            <span id="email-error" style="display:none; color:red;">Enter a valid Email</span>
                         </div>
                         <div>
                             <label for="mobile">PHONE NUMBER</label><br>
-                            <input type="text" id="mobile" pattern="(\d{10}?)" placeholder="9988776655" required>
+                            <input type="text" id="mobile" pattern="(\d{10}?)" placeholder="eg: 9988776655" required>
+                            <span id="mobile-error" style="display:none; color:red;">Enter a valid 10 digit mobile number</span>
                         </div>
                     </div>
                     <div class="passwords">
@@ -43,10 +46,11 @@
                         <div>
                             <label for="confirm_password">CONFIRM PASSWORD</label><br>
                             <input type="password" id="confirm_password" minlength="8" required>
+                            <span id="password-error" style="display:none; color:red;">Passwords don't match</span>
                         </div>
                     </div>
                     <div class="buttons">
-                        <button type="submit">Create Account</button>
+                        <button id="button" type="submit">Create Account</button>
                     </div>
                     <div class="login">
                         <p>Already have an account?<span> Log in</span></p>
